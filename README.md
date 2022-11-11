@@ -1,4 +1,4 @@
-## Angel Francisco garcia Guzman - A01704203
+## Angel Francisco García Guzmán - A01704203
 
 ### Características
 
@@ -14,4 +14,5 @@ El Pepe decidió abrir su nuevo negocio llamado “Guesas” en donde se dedicar
 ## Instrucciones
 
 Instalar el compilador de C++ (preferentemente MinGW)
+
 Corra el programa y corra el archivo.exe
