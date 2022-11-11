@@ -11,7 +11,7 @@ class Papas{
     
     public:
 
-    Papas(): precio(0), estilo(""), magnitud(0){};
+    Papas(): precio(0), estilo(""), magnitud(0.0){};
     Papas(int pre, std::string es, float ma): precio(pre), estilo(es), magnitud(ma){};
 
     //Funciones get
