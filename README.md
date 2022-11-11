@@ -1,10 +1,5 @@
 ## Angel Francisco García Guzmán - A01704203
 
-### Características
-
-Angel decidio abrir su nuevo 
-
-
 ## Contexto
 
 ¿A quién no le gusta una buena hamburguesa? 
