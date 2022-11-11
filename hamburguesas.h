@@ -12,7 +12,7 @@ class Hamburguesa{
     public:
 
     //Hamburguesa default
-    Hamburguesa() : precio(0), queso(0), tipo_pan(""){};
+    Hamburguesa() : precio(0), queso(""), tipo_pan(""){};
 
     Hamburguesa(int pre, std::string que, std::string pa): precio(pre), queso(que), tipo_pan(pa){};
 
