@@ -4,7 +4,7 @@
 #include"malteadas.h"
 #include"papas.h"
 
-main(){
+int main(){
     std::cout << "Hamburguesa: " << std::endl;
     Hamburguesa sencilla(85, "Con queso", "Hierbas");
     std::cout << sencilla.get_precio() << std::endl;
