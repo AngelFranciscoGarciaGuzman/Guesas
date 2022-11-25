@@ -1,15 +1,16 @@
 #include<string>
+#ifndef PRECIO_H_
+#define PRECIO_H_
 
-class Precio
-{
-private:
+class Articulo{
+protected:
     float precio;
     float promocion;
 
 public:
 
-    Precio(){};
-    Precio(float pre, float pro):precio(pre), promocion(pro){};
+    Articulo(): precio(0), promocion(0){};
+    Articulo(float pre, float pro):precio(pre), promocion(pro){};
 
     float get_precio();
     float get_promo();
@@ -19,19 +20,21 @@ public:
 
 };
 
-float Precio::get_precio(){
+float Articulo::get_precio(){
     return precio;
 }
 
-float Precio::get_promo(){
+float Articulo::get_promo(){
     return promocion;
 }
 
-void Precio::set_precio(float n_precio){
+void Articulo::set_precio(float n_precio){
     precio = n_precio;
     precio = precio - (precio * promocion);
 }
 
-void Precio::set_promo(float n_promo){
+void Articulo::set_promo(float n_promo){
     promocion = n_promo;
 }
+
+#endif

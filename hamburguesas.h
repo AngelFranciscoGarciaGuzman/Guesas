@@ -1,15 +1,18 @@
 #include<string>
-#include "precio.h"
-
+#include"precio.h"
 #include<sstream>
+#ifndef HAMBURGUESA_H_
+#define HAMBURGUESA_H_
 
-class Hamburguesa: public Precio{
+
+
+class Hamburguesa: public Articulo{
 
     //Crear esqueleto de una hamburguesa
     private: 
 
-    bool queso;
-    bool verduras;
+    std::string queso;
+    std::string verduras;
     std::string salsa;
 
     public:
@@ -17,29 +20,29 @@ class Hamburguesa: public Precio{
     //Hamburguesa default
     Hamburguesa(){};
 
-    Hamburguesa(bool que, bool ve, std::string sa): queso(que), verduras(ve), salsa(sa){};
+    Hamburguesa(std::string que, std::string ve, std::string sa): queso(que), verduras(ve), salsa(sa){};
 
     //Funciones "get"
 
-    bool get_queso();
-    bool get_verdura();
+    std::string get_queso();
+    std::string get_verdura();
     std::string get_salsa();
 
     //Funciones "set"
 
-    void set_queso(bool );
-    void set_verdura(bool );
+    void set_queso(std::string );
+    void set_verdura(std::string );
     void set_salsa(std::string );
 
     std::string to_string();
 };
 
 //Definir funciones "get"
-bool Hamburguesa::get_queso(){
+std::string Hamburguesa::get_queso(){
     return queso;
 }
 
-bool Hamburguesa::get_verdura(){
+std::string Hamburguesa::get_verdura(){
     return verduras;
 }
 
@@ -48,11 +51,11 @@ std::string Hamburguesa::get_salsa(){
 }
 
 //Definir funciones "set"
-void Hamburguesa::set_queso(bool n_queso){
+void Hamburguesa::set_queso(std::string n_queso){
     queso = n_queso;
 }
 
-void Hamburguesa::set_verdura(bool n_pan){
+void Hamburguesa::set_verdura(std::string n_pan){
     verduras = n_pan;
 }
 
@@ -61,6 +64,10 @@ void Hamburguesa::set_salsa(std::string n_salsa){
 }
 
 std::string Hamburguesa::to_string(){
-    stringstream aux;
+    std::stringstream aux;
+    aux << "queso: " << queso << " verduras: " << verduras << " salsa: "<< salsa << std::endl;
+    return aux.str();
 
 }
+
+#endif
