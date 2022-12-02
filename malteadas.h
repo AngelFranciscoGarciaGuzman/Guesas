@@ -1,12 +1,15 @@
 #include<string>
-#include "precio.h"
+#include "precio.h" //incluir clase "Articulo"
 #ifndef MALTEADA_H_
 #define MALTEADA_H_
 
+/*
+Clase Malteada: Clase que representa las Malteadas del menu y hereda de la clase Articulo.
+*/
 
 class Malteada: public Articulo{
 
-    //Crear esqueleto de una malteada
+    //Atributos
     private:
 
     std::string sabor;
@@ -14,20 +17,32 @@ class Malteada: public Articulo{
     
     public:
 
+    //Constructores
     Malteada():sabor(""), magnitud(0){};
     Malteada(std::string sa, float ma):sabor(sa), magnitud(ma){};
 
-    //Funciones get
+    //Getters
     std::string get_sabor();
     float get_magnitud();
 
-    //Funciones set
+    //Setters
     void set_sabor(std::string );
     void set_magnitud(float );
 
     std::string to_string();
 
 };
+
+
+//Definir funciones "get"
+
+/**
+ * Getter de los atributos de Malteada
+ *
+ * @param
+ * @return atributos
+ */
+
 
 std::string Malteada::get_sabor(){
     return sabor;   
@@ -38,6 +53,15 @@ float Malteada::get_magnitud(){
 }
 
 
+//Definir funciones "set"
+
+/**
+ * Setter de los ingredientes y magnitud
+ *
+ * @param ingrediente
+ * @return
+ */
+
 void Malteada::set_sabor(std:: string n_sabor){
     sabor = n_sabor;
 }
@@ -45,6 +69,8 @@ void Malteada::set_sabor(std:: string n_sabor){
 void Malteada::set_magnitud(float n_magnitud){
     magnitud = n_magnitud;
 }
+
+//Funcion to_string para imprimir los atributos
 
 std::string Malteada::to_string(){
     std::stringstream aux;

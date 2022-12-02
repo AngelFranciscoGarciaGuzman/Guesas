@@ -1,8 +1,8 @@
 #include<string>
 #include<sstream>
-#include"hamburguesas.h"
-#include"malteadas.h"
-#include"papas.h"
+#include"hamburguesas.h" //incluir clase "Hamburguesa"
+#include"malteadas.h" //incluir clase "Malteadas"
+#include"papas.h" //incluir clase "Papas"
 #ifndef ORDEN_H_
 #define ORDEN_H_
 

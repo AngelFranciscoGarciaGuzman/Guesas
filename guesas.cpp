@@ -1,9 +1,16 @@
+//Angel Francisco Garcia Guzman - A01704203
+
+//Menu para proyecto escolar "Las Guesas"
+
+
 #include<iostream>
 #include<string>
 #include"hamburguesas.h"
 #include"malteadas.h"
 #include"papas.h"
 #include"orden.h"
+//Incluir los headers con los articulos y la clase orden
+
 
 
 std::string none;
@@ -299,6 +306,8 @@ int main(){
     getline(std::cin, none);
 
 
+    //Aplicar setters con los datos proporcionados por el usuario
+
     num_1.agregaHamburguesa(queso_1, verdura_1, salsa_1, 0);
     num_1.asignar_precio_h(precioh_1, 0);
 
@@ -342,4 +351,3 @@ int main(){
 
     system("pause");
 }
-

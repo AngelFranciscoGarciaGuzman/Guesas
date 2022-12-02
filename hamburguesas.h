@@ -1,14 +1,16 @@
 #include<string>
-#include"precio.h"
+#include"precio.h" //incluir clase "Articulo"
 #include<sstream>
 #ifndef HAMBURGUESA_H_
 #define HAMBURGUESA_H_
 
-
+/*
+Clase Hamburguesa: Clase que representa las hamburguesas del menu y hereda de la clase Articulo.
+*/
 
 class Hamburguesa: public Articulo{
 
-    //Crear esqueleto de una hamburguesa
+    //Atributos
     private: 
 
     std::string queso;
@@ -17,18 +19,18 @@ class Hamburguesa: public Articulo{
 
     public:
 
-    //Hamburguesa default
+    //Constructores
     Hamburguesa(){};
 
     Hamburguesa(std::string que, std::string ve, std::string sa): queso(que), verduras(ve), salsa(sa){};
 
-    //Funciones "get"
+    //Getters
 
     std::string get_queso();
     std::string get_verdura();
     std::string get_salsa();
 
-    //Funciones "set"
+    //Setters
 
     void set_queso(std::string );
     void set_verdura(std::string );
@@ -38,6 +40,15 @@ class Hamburguesa: public Articulo{
 };
 
 //Definir funciones "get"
+
+/**
+ * Getter de los atributos de hamburguesa
+ *
+ * @param
+ * @return atributos
+ */
+
+
 std::string Hamburguesa::get_queso(){
     return queso;
 }
@@ -51,6 +62,14 @@ std::string Hamburguesa::get_salsa(){
 }
 
 //Definir funciones "set"
+
+/**
+ * Setter de los ingredientes
+ *
+ * @param ingrediente
+ * @return
+ */
+
 void Hamburguesa::set_queso(std::string n_queso){
     queso = n_queso;
 }
@@ -62,6 +81,8 @@ void Hamburguesa::set_verdura(std::string n_pan){
 void Hamburguesa::set_salsa(std::string n_salsa){
     salsa = n_salsa;
 }
+
+//Funcion to_string para imprimir los atributos
 
 std::string Hamburguesa::to_string(){
     std::stringstream aux;
